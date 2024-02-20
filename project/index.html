@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Box</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="options">
+      <span class="minimize">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/>
+  </svg>
+      </span>
+      <span class="cross">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6m0 12L6 6"/>
+  </svg>
+      </span>
+    </div>
+    <div class="code-box" id="code-box">
+      <pre>[
+        '{{repeat(5, 7)}}',
+        {
+          phone: '+1 {{phone()}}',
+          address: '{{integer(100, 999)}} {{street()}}, {{city()}}, {{state()}}, {{integer(100, 10000)}}',
+          about: '{{lorem(1, "paragraphs")}}',
+          registered: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}', '{{repeat(7)}}',
+            '{{lorem(1, "words")}}'
+          ],
+          friends: [
+            '{{repeat(3)}}',
+            {
+              id: '{{index()}}',
+              name: '{{firstName()}} {{surname()}}'
+       
+    {
+        "name": "Dante Robel",
+        "info": {
+            "title": "Ms.",
+            "age": 40,
+            "phone": "(458) 757-4593",
+            "email": "cpadberg@hotmail.com"
+        }
+    },
+    {
+        "name": "John Aufderhar",
+        "info": {
+            "title": "Prof.",
+            "age": 24,
+            "phone": "1-851-405-4711 x073",
+            "email": "genesis45@gmail.com"
+        }
+    }
+]
+          }
+        }
+      ]</pre>
+    </div>
+    <div class="button-container" id="buttons-container">
+      <button class="clean" onclick="clearCode()">Clear Code</button>
+      <button class="copy" onclick="copyCode()">Copy Code</button>
+    </div>
+  </div>
+
+  <div class="settings-icon" id="settings-icon">
+    <ion-icon name="settings-outline"></ion-icon>
+  </div>
+
+  <script src="code.js"></script>
+</body>
+</html>
