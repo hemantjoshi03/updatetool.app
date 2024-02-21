@@ -34,6 +34,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh; /* Change to 100vh to cover the entire viewport */
@@ -68,7 +69,7 @@ body {
 .code-box {
   width: 70%;
   max-width: 800px;
-  height: auto; /* Change to auto to accommodate content */
+  height: 80vh;
   background-color: #1e1e1e;
   color: #ffffff;
   font-family: 'Courier New', monospace;
